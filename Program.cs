@@ -14,10 +14,12 @@ namespace GuessingGame {
                 if (userGuessInt == secretNumber) {
                     Console.WriteLine ($"You guess it! It was {secretNumber}!");
                     return;
-                } else if (userGuessInt > secretNumber) {
+                } else if (userGuessInt > secretNumber && i != 2) {
                     Console.WriteLine ("Nope. Too High. Guess Lower.");
-                } else if (userGuessInt < secretNumber) {
+                } else if (userGuessInt < secretNumber && i != 2) {
                     Console.WriteLine ("Nope. Too Low. Guess Higher.");
+                } else {
+                    Console.WriteLine ($"Game Over! It was {secretNumber}!");
                 }
             }
         }
